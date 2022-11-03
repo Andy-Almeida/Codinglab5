@@ -7,7 +7,7 @@
  
 0. List of members who contributed to the implementation of this project:
    
-
+   GROUP MEMBERS: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Prasad
  
 1. Describe your algorithm for the sentenceSplitter( ) function in pseudocode.
 
