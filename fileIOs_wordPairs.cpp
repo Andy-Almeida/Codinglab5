@@ -7,6 +7,8 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 
 #include "fileIOs_wordPairs.h"
 
+namespace NS_FILEIOWORDPAIRS{
+
 void sentenceSplitter( string& fname, vector<string>& sentences){
 
 }
@@ -24,4 +26,6 @@ void freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap
 
 void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt){
    
+}
+
 }
