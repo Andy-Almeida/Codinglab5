@@ -53,7 +53,18 @@ void wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> 
 
 
 void freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap<int, pair<string, string> > &freqWordpair_mmap ){
-    
+    map< pair<string, string>, int>::iterator it = wordpairFreq_map.begin();
+//pair of strings 
+pair<string, string> p1;
+while(it != wordpairFreq_map.end()){
+
+//freq is the frequency of the word pair
+int freq = it->second;
+p1 = it->first;
+freqWordpair_mmap.emplace(freq,p1);
+it++;
+
+}
 }
 
 
