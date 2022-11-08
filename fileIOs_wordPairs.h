@@ -20,7 +20,7 @@ namespace NS_FILEIOWORDPAIRS{
 
 using namespace std;
 
-void sentenceSplitter( string& fname, vector<string>& sentences);
+bool sentenceSplitter( string& fname, vector<string>& sentences);
 
 void wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> &wordpairFreq_map);
 
