@@ -1,9 +1,7 @@
 /*
 Cpp file, Algorithm Implementation
 Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Prasad
-
 */
-
 
 #include "fileIOs_wordPairs.h"
 
@@ -24,9 +22,9 @@ bool sentenceSplitter( string& fname, vector<string>& sentences){
 
     int position = 0;
     int begin = 0;
+    
     //splits the contents of the file into sentences
     while ((begin = entireSpeech.find_first_not_of(delimiters, position)) != (int)string::npos ){
-        
         while (entireSpeech[begin] == ' ' || entireSpeech[begin] == '"') {
             begin = begin + 1;
         }
@@ -43,34 +41,31 @@ bool sentenceSplitter( string& fname, vector<string>& sentences){
     
     inFS.close();
     return true;
-}
+}//End of bool sentenceSplitter
 
 
 
 void wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> &wordpairFreq_map){
    
-}
+}//End void wordpairMapping
 
 
 void freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap<int, pair<string, string> > &freqWordpair_mmap ){
     map< pair<string, string>, int>::iterator it = wordpairFreq_map.begin();
-//pair of strings 
-pair<string, string> p1;
-while(it != wordpairFreq_map.end()){
-
-//freq is the frequency of the word pair
-int freq = it->second;
-p1 = it->first;
-freqWordpair_mmap.emplace(freq,p1);
-it++;
-
-}
-}
+    //pair of strings 
+    pair<string, string> p1;
+    while(it != wordpairFreq_map.end()){
+        //freq is the frequency of the word pair
+        int freq = it->second;
+        p1 = it->first;
+        freqWordpair_mmap.emplace(freq,p1);
+        it++;
+    }
+}//End of void freqWordpairMmap
 
 
 void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt){
-   
-   ofstreamoutF;
+   ofstream outF;
    outF.open(outFname);
    multimap<int, pair<string,string> >::reverse_iterator atLastEnd=freqWordpair_multimap.rbegin();
    multimap<int, pair<string,string> >::reverse_iterator atBegTop;
@@ -101,6 +96,7 @@ void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap,
       trackerC=beg->first;//for counter
       cout << "<" << firstWord.str() << ", " << secondWord.str() << ">: " << trackerC << endl;
    }
-
    outF.close();
-}
+}//End of void printWordpairs
+    
+}//End of NameSpace
