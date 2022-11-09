@@ -44,6 +44,23 @@ bool sentenceSplitter( string& fname, vector<string>& sentences){
 
 
 void wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> &wordpairFreq_map){
+    fstream fs(filename);
+    map<string, int> mp;
+    string word;
+    while (fs >> word)
+    {
+        if (!mp.count(word))
+            mp.insert(make_pair(word, 1));
+        else
+            mp[word]++;
+    }
+    fs.close();
+    for (map<string, int> :: iterator p = mp.begin();
+         p != mp.end(); p++)
+    {
+        if (p->second == 1)
+            cout << p->first << endl;
+    }
    
 }//End void wordpairMapping
 
