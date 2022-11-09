@@ -15,8 +15,7 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 #include <vector>
 #include <map>
 #include <utility>
-
-namespace NS_FILEIOWORDPAIRS{
+#include <sstream>
 
 using namespace std;
 
@@ -27,7 +26,5 @@ void wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> 
 void freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap<int, pair<string, string> > &freqWordpair_mmap );
 
 void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt);
-
-}
 
 #endif 
