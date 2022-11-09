@@ -5,8 +5,6 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 
 #include "fileIOs_wordPairs.h"
 
-namespace NS_FILEIOWORDPAIRS{
-
 bool sentenceSplitter( string& fname, vector<string>& sentences){
     ifstream inFS; //input file stream
     string entireSpeech;
@@ -98,5 +96,3 @@ void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap,
    }
    outF.close();
 }//End of void printWordpairs
-    
-}//End of NameSpace
