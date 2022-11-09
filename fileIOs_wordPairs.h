@@ -5,8 +5,8 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 */
 
 
-#ifndef fileIOs_wordPairs_h
-#define fileIOs_wordPairs_h
+#ifndef FILEIOS_WORDPAIRS_H
+#define FILEIOS_WORDPAIRS_H
 
 //include libraries
 #include <string>
@@ -16,6 +16,8 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 #include <map>
 #include <utility>
 #include <sstream>
+//#include <bits/stdc++.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -27,4 +29,6 @@ void freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap
 
 void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt);
 
+
 #endif 
+
