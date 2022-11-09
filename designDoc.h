@@ -11,46 +11,41 @@
  
 1. Describe your algorithm for the sentenceSplitter( ) function in pseudocode.
    void sentenceSplitter (string& fname, vector<string>& sentences) {
+     read in file
+     add all contents of file to string
       //tokenize sentences by delimiters period, question mark, period + endquotes, questionmark + endquotes, newline char ".", "?", "."", "$" 
-
       while (not end of fname) {
          tokenize sentences by delimiters
          sentences.push_back(tokenSentences)
       }
-      //probably is more to this
 
 
 2. Describe your algorithm for the wordpairMapping( ) function in pseudocode.
    void wordpairMapping (vector<string>& sentences, map<pair<string,string>, int>& wordpairFreq_map) {
-      while(sentence not end){
-
-         for(each index of sentence) {
-            tokenize each sentence into words
-            store in vector<string> tokenwords
-
-            for(iterate through tokenwords){
-               store current word
-
-               for(iterate through tokenwords) {
-                  compare currentword to all other words
-
-                  if(no match){
-                     
-                     if(map doesnt contain pair){
-                        add pair
-                     }
-
-                     else if(map contains pair, update pair count){
-                        update pair count
-                     }
-                  }
+      for(iterate over sentences){
+         
+         make all characters lowercase
+         tokenize sentence into words
+         sort words in alphabetical order
+         create unique set of words
+         
+         for(iterate over unique sets of words){ //first word
+            for(iterate over unique sets of words){ //second word
+               if(pair isn't the same word twice){
+                  add first word and second word as pair to pair set
                }
             }
          }
-      }
+         
+         for(iterate over pair set){
+            if(pair isn't in the map){
+               add the pair to map
+            }
+            else{ //pair is in the map
+               update count
+            }
+         }
    }
-   //probably is more to this or can be optimized
-
 
    //THESE NEXT TWO IS ONLY FOR OUR GROUP AND IS NOT PART OF THE DESIGN DOC REQUIREMENT
    //REPEAT THESE NEXT 2 ARE NOT PART OF THE ASSIGNMENT 
