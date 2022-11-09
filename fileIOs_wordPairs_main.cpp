@@ -6,8 +6,11 @@ Team: Andy Almeida, Kao Saephan, Nicholas Valencia, Umaran Ahmadzai, Shanil Pras
 
 #include "fileIOs_wordPairs.h"
 
-
 int main() {
+   //  string FileName = "test.txt";
+   //  vector<string> sentences;
+
+
 
 return 0;
 }
